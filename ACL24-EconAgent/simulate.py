@@ -248,7 +248,6 @@ def complex_actions(env, obs, beta=0.1, gamma=0.1, h=1):
 def main(policy_model='gpt', num_agents=100, episode_length=240, dialog_len=3, beta=0.1, gamma=0.1, h=1, max_price_inflation=0.1, max_wage_inflation=0.05):
     env_config['n_agents'] = num_agents
     env_config['episode_length'] = episode_length
-    print('---------------test1----------------')
     if policy_model == 'gpt':
         total_cost = 0
         env_config['flatten_masks'] = False
