@@ -35,13 +35,10 @@ def get_multiple_completion(dialogs, num_cpus=15, temperature=0, max_tokens=100)
 
 def get_completion(dialogs, temperature=0, max_tokens=100):
     from openai import OpenAI
-    # base_url = "https://openkey.cloud/v1"
-    # api_key = "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"
-    # client = OpenAI(base_url=base_url, api_key=api_key)
-    base_url = "https://api.zhizengzeng.com/v1"
-    api_key = "sk-zk2a99045e89d085b33b071d8d3b1edf5ae67301be585b1f"
+    base_url = "https://openkey.cloud/v1"
+    api_key = "your_api_key"
     client = OpenAI(base_url=base_url, api_key=api_key)
-
+   
 
     import time
     
