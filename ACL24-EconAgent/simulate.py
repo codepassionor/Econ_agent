@@ -3,7 +3,7 @@ import argparse
 import fire
 import os
 import sys
-from tqdm import tqdm  # 导入 tqdm
+from tqdm import tqdm 
 import ai_economist.foundation as foundation
 import numpy as np
 import matplotlib.pyplot as plt
