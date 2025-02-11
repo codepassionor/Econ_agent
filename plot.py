@@ -3,7 +3,7 @@ import matplotlib.pyplot as plt
 import pickle as pkl
 import pandas as pd
 
-with open('/Users/heyangfan/Desktop/ACL24-EconAgent/data/gpt-3-noperception-reflection-1-100agents-2months/dense_log.pkl', 'rb') as f:
+with open('your_pkl_path', 'rb') as f:
     dense_log = pkl.load(f)
 
 years = []
