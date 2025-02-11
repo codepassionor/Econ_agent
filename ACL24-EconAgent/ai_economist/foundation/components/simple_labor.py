@@ -193,18 +193,17 @@ class SimpleLabor(BaseComponent):
             else:
                 # If action > num_labor_hours, this is an error.
                 raise ValueError
-        # newly added
-        # total_labor = np.sum(agent_labors)
-        # I_t = self.get_investment_environment_factor()
-        # print(f'we have got the investment factor I_t {I_t}!')
+        total_labor = np.sum(agent_labors)
+        I_t = self.get_investment_environment_factor()
+        print(f'we have got the investment factor I_t {I_t}!')
 
-        # self.K_t = (1 - self.delta) * self.K_t + I_t
-        # total_supply = total_labor * self.world.productivity_per_labor * self.K_t  
+        self.K_t = (1 - self.delta) * self.K_t + I_t
+        total_supply = total_labor * self.world.productivity_per_labor * self.K_t  
         
       
        
-        total_labor = np.sum(agent_labors)
-        total_supply = total_labor * self.world.productivity_per_labor
+        # total_labor = np.sum(agent_labors)
+        # total_supply = total_labor * self.world.productivity_per_labor
         year = (self.world.timestep-1)//self.world.period
         self.world.total_products += total_supply
         if year >= len(self.world.nominal_gdp):
